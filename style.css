@@ -3,8 +3,11 @@ body
 {
     margin:             0;
     overflow-x:         hidden;
-
     margin-top:         30px;
+    background-image:   url('images/Blank Map.jpg');
+    background-size:    125% auto;
+    background-position: left top;
+    font-family:    Philosopher;
 }
 
 .nobr
@@ -62,7 +65,8 @@ ul.tabcontainer li:not(:first-child)
 
 ul.tabcontainer .inactive
 {
-    background-color:   #CCCCCC;
+    background-color:   rgba(58, 14, 8, 0.82);
+    border-radius: 0px 0px 0px 8px;
 }
 
 .tabbody
@@ -87,6 +91,15 @@ ul.tabcontainer .inactive
     padding:            0;
 }
 
+.selectionlist input{
+    margin: 10px 0px;
+    border-radius: 3px;
+    height: 30px;
+    min-width: 40px;
+    padding-left: 6px;
+    font-size: .6em;
+}
+
 .panecontainer
 {
     position:           fixed;
@@ -99,16 +112,24 @@ ul.tabcontainer .inactive
 
 .pane
 {
+    color:              white;
+    font-size:          1.4em;
     position:           relative;
     left:               0;
     height:             100vh;
     overflow-x:         hidden;
     overflow-y:         auto;
-    background:         white;
-    box-shadow:         1em 0 1em rgba(0, 0, 0, 0.5);
+    background-image:   url('images/stone-tile.png');
+    background-size:    190% auto;
+    background-position:center;
+    box-shadow:         .5em 0 .5em rgba(0, 0, 0, 0.4);
     -webkit-transition: left 0.2s ease;
     transition:         left 0.2s ease;
     z-index:            1;
+}
+
+.pane -webkit-scrollbar { 
+    display: none; 
 }
 
 .pane.inactive
@@ -132,8 +153,8 @@ ul.tabcontainer .inactive
 {
     margin-left:        1em;
     margin-top:         1em;
-    width:              5ch;
-    height:             5ch;
+    width:              6ch;
+    height:             6ch;
     cursor:             pointer;
     z-index:            1;
 }
